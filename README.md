@@ -4,6 +4,8 @@ Small utility for comparing json documents. Prints out a json document containin
 
 ##Building & running
 ```sh
+go get github.com/mahe-go/json-diff
+cd $GOPATH/github.com/mahe-go/json-diff
 go build
 ./json-diff file1 file2
 ```
