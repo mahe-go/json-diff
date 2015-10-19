@@ -41,7 +41,7 @@ func main() {
 		log.Fatalf("Cannot parse %s: %s", os.Args[1], err)
 	}
 	
-	diffresult, err := json.Marshal(diff.Diff(first.(map[string]interface{}), second.(map[string]interface{})))
+	diffresult, err := json.MarshalIndent(diff.Diff(first.(map[string]interface{}), second.(map[string]interface{})), "", "\t")
 	if err != nil {
 		log.Fatalf("Cannot marshal result: %s", os.Args[1])
 	}
